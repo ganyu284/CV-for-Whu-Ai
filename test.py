@@ -1,7 +1,9 @@
 from logger import My_logger
-
+from Argparse import Arg_parse
 def test_logger():
-    Log = My_logger().logger
+    parser = Arg_parse().parser
+    args = parser.parse_args()
+    Log = My_logger(args.logger_config).logger
     Log.debug = ("This is a debug message")
     Log.info("This is a info message")
     Log.warning("This is a warn message")
