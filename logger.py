@@ -26,7 +26,7 @@ class My_logger(object):
         self.LOGGER_FILE_PATH = config['LOGGER_FILE_PATH']
         self.logger = logging.getLogger()
         self.formatter = logging.Formatter(fmt = self.FMT, datefmt =self.DATEFMT)
-        self.logger_file = '{0}{1}.log'.format(self.LOGGER_FILE_PATH,strftime("%Y-%m-%d"))
+        self.logger_file = '{0}{1}.log'.format(self.LOGGER_FILE_PATH,strftime("%Y-%m-%d-%M"))
         self.logger.addHandler(self.get_file_handle(self.logger_file))
         self.logger.addHandler(self.get_console_handle())
         self.logger.setLevel(eval('logging.DEBUG'))
