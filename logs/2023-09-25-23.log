@@ -1,2 +1,0 @@
-2023-09-25 11:23:43 test_dataloader.py [line:25] INFO: shape of X [N,C,H,W]:torch.Size([64, 1, 28, 28])
-2023-09-25 11:23:43 test_dataloader.py [line:26] INFO: shape of y:torch.Size([64])torch.int64
