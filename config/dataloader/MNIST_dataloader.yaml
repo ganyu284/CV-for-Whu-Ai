@@ -1,0 +1,6 @@
+batch_size: 64
+root: 'dataset'
+trainloader_train: True
+trainloader_download: True
+testloader_train: False
+testloader_download: True

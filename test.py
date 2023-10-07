@@ -17,5 +17,12 @@ def test_register():
     import_all_modules_for_register()
     print(f"Register.model._dict after: {str(Registers.dataloader._dict)}")   
     Registers.dataloader["Minstdataloader"].output()
+
+def test_dataloader():
+    import_all_modules_for_register()
+    full_dataloader = Registers.dataloader["Minstdataloader"]()
+    train_dataloader = full_dataloader.train_dataloader
+    train_dataloader = full_dataloader.test_dataloader
+    full_dataloader.output_size()
 if __name__=='__main__':
-    test_register()
+    test_dataloader()
