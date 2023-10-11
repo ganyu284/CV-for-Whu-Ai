@@ -2,8 +2,10 @@ from logger import My_logger
 import importlib 
 log_register = My_logger().logger
 
-MODEL_MODULES = ["dataloader"]
-ALL_MODULES = [("dataset", MODEL_MODULES)]
+DATALOADER_MODULES = ["dataloader"]
+MODEL_MODULES = ["letnet5"]
+ALL_MODULES = [("dataset", DATALOADER_MODULES),("model",MODEL_MODULES)]
+
 
 class Register:
 
@@ -46,6 +48,7 @@ class Registers:
         raise RuntimeError("Registeries is not intended to be instantiated")
         
     dataloader = Register('dataloader')
+    model = Register('model')
 
 def _handle_errors(errors):
     

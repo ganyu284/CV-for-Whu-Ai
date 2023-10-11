@@ -32,7 +32,7 @@ class Minstdataloader(dataloader):
             root = config['root'],
             train = config['testloader_train'],
             download = config['testloader_download'],
-            transform =transforms.ToTensor,
+            transform =transforms.ToTensor(),
         )
         self.log = My_logger().logger
         self.train_dataloader = DataLoader(self.train_data, batch_size = config['batch_size'])
